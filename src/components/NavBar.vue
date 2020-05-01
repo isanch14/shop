@@ -2,7 +2,7 @@
   <v-app-bar app color="red" dark>
     <v-toolbar-title class="font-weight-light">
       <v-btn text class="text-none font-weight-light headline" @click="$router.push('/')">
-        <span>The</span>
+        <span>Ranch</span>
         <span class="font-weight-regular">Shop</span>
       </v-btn>
     </v-toolbar-title>

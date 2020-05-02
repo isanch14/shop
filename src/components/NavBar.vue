@@ -56,6 +56,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { db } from '../plugins/firebase'
 
 export default {
   name: 'NavBar',
@@ -69,11 +70,17 @@ export default {
       user: 'getUser',
     }),
   },
+  updated () {
+    this.bind()
+  },
   methods: {
     async logOut() {
       await this.$firebase.auth().signOut()
       this.setUser('')
       this.$router.push('/')
+    },
+    async bind() {
+      await this.$bind('cart' , db.collection('cart').doc(this.user.uid))
     },
     ...mapActions(['setUser']),
   },

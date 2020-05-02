@@ -25,7 +25,8 @@
               <v-list-item>
                 <v-spacer />
                 <v-list-item-action>
-                  <v-list-item-action-text v-if="calculating" class="title">Calculating...</v-list-item-action-text>
+                  <v-list-item-action-text v-if="calculating" class="title">
+                    Calculating...</v-list-item-action-text>
                   <v-list-item-action-text v-else class="title">$ {{ cart.total }}</v-list-item-action-text>
                 </v-list-item-action>
               </v-list-item>
